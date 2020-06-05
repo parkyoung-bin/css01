@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .list{overflow: hidden; border:1px solid #777; width: 50%; margin:0 auto;}
+        .inner{float: left; width:25%;border:1px solid #777; box-sizing: border-box;}
+
+        .content{overflow:hidden; border:1px solid #777;}
+        .left{float:left;border:1px solid #777;}
+        .right{float:right;border:1px solid #777;}
+        .left > span{
+            display: block; /*span은 인라인 요소라 세로로 배치하려면 블럭으로 바꿔줘야함*/
+            }
+            /*clear:both로 float으로 정렬하던 탑 쌓기를 해제한다.*/
+            .clear {clear:both;}
+    </style>
+
+</head>
+<body>
+
+    <div class ="list">
+        <div class ="inner">
+            <img src="img/bgimg.png" alt="">            
+            <div class="content">
+                <div class="left">
+                    <span>좌</span>
+                    <span>좌</span>
+                    <span>좌</span>                    
+                </div>
+                <div class="right">right</div>
+
+                <div class="clear">ddd...</div>
+                    
+                
+            </div>
+        </div>  <div class ="inner">
+            <img src="img/bgimg.png" alt="">            
+        </div>  <div class ="inner">
+            <img src="img/bgimg.png" alt="">            
+        </div>  <div class ="inner">
+            <img src="img/bgimg.png" alt="">            
+        </div>
+    </div>
+    
+</body>
+</html>
