@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!-- 부트스트랩 디자인 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+    <!-- 제이쿼리 추가 (순성중요) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <!-- 가장 아래쪽에 개인 디자인 추가 -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css" >
+
+    <style>
+        .quick {position: fixed;top: 500px;right: 0;width: 114px;z-index: 100;text-align: center;}
+     @media (max-width:767px){
+                .log{display: none;}
+                .text{display:none;}
+                .quick{width:50px;}
+                .quick li p{font-size:10px}
+            }
+        
+    img {width: auto; height: auto;}
+    .imgfile {position: relative; margin-top: 105px; padding-left:20%;padding-right:20%;}
+    
+    header > h1 { display:block;text-align:center; font-size: 100px; background-color: white; margin: 0;}  
+    header > nav > ul > li{display: inline-block;}
+    header > ul { display:block;position: absolute;top:10px;right:10px;overflow: hidden;}       
+    header > ul > li > a {color : black;} 
+    header {position: fixed; width: 100%;}
+    header > ul > li {float:left;  padding:20px;}
+    header > nav { display:block; height: 45px; background: #444; text-align: center;display: block; padding:20px;}
+    header > nav > ul > li > a {color : white; transition: all 0.5s linear 0s;padding: 0 20px; margin: 0 10px;}
+    header > nav ul li a:hover { border-bottom: 5px solid #fff; color :white;text-decoration: none;}
+    
+
+
+    .text{position:absolute; top:50px;right: 500px;}
+    .text p{background: rgba(0,0,0,0.3);padding: 10px;color: #fff;margin-bottom: 5px;}
+    .text h2{background: rgba(0,0,0,0.3);padding: 10px;color: #fff;margin-bottom: 5px;}
+   .quick li{background-color: #444; padding:10px; border-top: 1px solid #4d4d4d;}
+   .quick li a { color:white; }
+   .quick li p {color :white; font-size: 10px;}
+   .content{margin-top: 30px;}
+   /*
+   .section2 {overflow: hidden;width: 960px; margin: 0 auto;text-align: center; margin-top: 50px;}
+  */
+   .content li{text-align: center; float:left; padding:20px; }
+   .content li h2{    font-size: 0.4em;}
+   .content li .jaket{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.8);opacity: 0;}
+   .content li:hover .jaket{opacity: 1;}
+
+    
+    </style>
+</head>
+<body>
+    <header>
+		<h1>Z A R A</h1>
+		<ul class ="log">
+			<li><a href="#">LOGIN</a></li>
+			<li><a href="#">REGISTER</a></li>
+		</ul>
+		
+		<nav>
+			<ul>
+				<li><a href="#">WOMAN</a></li>
+				<li><a href="#">TRF</a></li>
+				<li><a href="#">MAN</a></li>
+				<li><a href="#">KIDS</a></li>
+				<li><a href="#">EDITORIALS</a></li>
+				
+			</ul>
+        </nav>
+       
+	</header>
+    <aside class="quick">
+		<ul>
+			<li>
+				<a href="#">전화문의<br></a><p>010-1234-5678</p>
+			</li>
+			<li>
+				<a href="#">카카오톡<br></a><p>1:1상담</p></a>
+		    </li>
+			<li>
+				<a href="#">오시는길</a>
+			</li>
+		</ul>
+	</aside>
+    <section>
+
+        <div class="col-xs-12 imgfile">
+            <img src="img/main.jpg" alt="main" l>
+            <div class="text">
+                <h2>Category Bannner</h2>
+                <p>Upload image and description</p>
+                <p>Upload image and description</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section2">
+        
+        <div class="container">
+            <ul class="row content">
+
+                <li class ="col-sm-3 col-xs-6" >
+                    <img src="img/img_01.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                </div>
+                </li>
+                
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_02.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                </div>
+                    
+                </li>
+
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_03.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                </div>
+                </li>
+
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_03.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                    </div>
+                </li>
+
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_03.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                    </div>
+                </li>
+
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_03.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                    </div>
+                </li>
+
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_03.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                    </div>
+                </li>
+
+                <li class ="col-sm-3 col-xs-6">
+                    <img src="img/img_03.jpg" alt="" class="product">
+                    <h2>Product with Variants</h2>
+                    <h2>★★★☆☆ <span class="red">2REVIEW(S)</span><br>$59.00</h2>
+                    <div class="jaket">
+                    <a href="#">Jaket</a>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

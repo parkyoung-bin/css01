@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이스북</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css" >
+
+
+    <style>
+          @media (max-width:767px){
+            .aside-menu {
+                display: none;
+            }
+        }
+        * { padding: 0; margin: 0;  box-sizing: border-box;}
+        .title-inner .profile { position: absolute; top: 15px; left: 10;}
+        .navbar {background-color:#333333; border-radius: 0px; margin:0px;}
+        .navbar-nav a{color:white;}
+        .navbar-nav a:hover{color: #fff;}
+        .section-inner{border-left:1px solid #ddd;border-right: 1px solid #ddd;}
+        .filebox label{background-color: #5cb85c; padding:6px 10px; color :#fff}
+        .aside-inner{margin-top: 20px;}
+        .link-inner{overflow: hidden; border-top: 1px solid #ddd; padding :10px; text-align: center;}
+        .like-inner{border-top:1px solid #ddd; margin-top: 10px; padding :12px;}
+        .link-inner span { float: left; width: 33.3333%; text-align: center;}
+        .title-inner{position : relative; padding :15px 0;}
+        .title-inner .title {padding-left: 50px;}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+               
+
+              </div>
+ 
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">                
+                     <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown">정보관리
+                
+                      <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"> 로그인</span></a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                      </ul>
+                    </li>                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    
+    <section>
+        <div class="container">
+            <div class="row">
+                <aside class="col-sm-3">
+                    <div class="aside-inner">
+			            <div class="menu1">
+                            <p><img src="img/profile.png">박영빈</p>
+                            <ul>
+                                <li>뉴스피드</li>
+                                <li>메신저</li>
+                                <li>watch동영상</li>
+                            </ul>
+			            </div>
+                        <div class="menu2">
+                            <p>둘러보기</p>
+                            <ul>
+                                <li>기부 캠페인</li>
+                                <li>페이지</li>
+                                <li>그룹</li>
+                                <li>이벤트</li>
+                                <li>친구리스트</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-xs-12 col-sm-7 section-inner">
+					<h4>게시글을 등록하세요</h4>
+					
+					<div class="fileDiv">
+						<img id="fileImg" src="#">
+					</div>
+					<div class="reply-content">
+						<textarea class="form-control" rows="3" name="content" id="content"></textarea>
+						<div class="reply-group">
+							<div class="filebox pull-left">
+								<label for="file">이미지업로드</label> 
+								
+							</div>
+							<button type="button" class="right btn btn-info" id="uploadBtn">등록하기</button>
+						</div>
+					</div>
+					
+                   
+                    <div class ="body-box">
+	                    <div class="title-inner">
+	                    
+	                    <div class="profile"><img src="img/profile.png" alt=""></div>
+	                        <div class="title">
+	                            <p>테스트</p>
+	                            <small>21시간</small>
+	                        </div>
+	                    </div>
+	                    <div class="content-inner">
+	                        
+	                        <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트합니다</p>
+	                    </div>
+	                    <div class="image-inner">
+	                        
+	                        <img src="img/4.jpg" width="1500" alt="">
+	                    </div>
+	                    <div class="like-inner">
+	                        
+	                        <img src="img/icon.jpg" width="20" height="20"alt="">
+	                        <span>522</span>
+	                    </div>
+	                    <div class="link-inner">
+	                        <span><i class="glyphicon glyphicon-thumbs-up"></i>좋아요</span>
+	                        <span><i class="glyphicon glyphicon-comment"></i>댓글달기</span>
+	                        <span><i class="glyphicon glyphicon-share-alt"></i>공유하기</span>
+	                    </div>
+                    </div>
+                    <div>
+	                    <div class="title-inner">
+	                    
+	                    <div class="profile"><img src="img/profile.png" alt=""></div>
+	                        <div class="title">
+	                            <p>테스트</p>
+	                            <small>21시간</small>
+	                        </div>
+	                    </div>
+	                    <div class="content-inner">
+	                        
+	                        <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트합니다</p>
+	                    </div>
+	                    <div class="image-inner">
+	                        
+                            <img src="img/4.jpg" width="1500" alt="">
+	                    </div>
+	                    <div class="like-inner">
+	                        
+	                        <img src="img/icon.jpg" width="20" height="20" alt="">
+	                        <span>522</span>
+	                    </div>
+	                    <div class="link-inner">
+	                        <span><i class="glyphicon glyphicon-thumbs-up"></i>좋아요</span>
+	                        <span><i class="glyphicon glyphicon-comment"></i>댓글달기</span>
+	                        <span><i class="glyphicon glyphicon-share-alt"></i>공유하기</span>
+	                    </div>
+                    </div>
+                </div>
+                
+                <aside class="col-sm-2">
+                    <div class="aside-inner">
+			            <div class="menu1">
+                            <p>목록</p>
+                            <ul>
+                                <li>목록1</li>
+                                <li>목록2</li>
+                                <li>목록3</li>
+                                <li>목록4</li>
+                                <li>목록5</li>
+                            </ul>
+			            </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>

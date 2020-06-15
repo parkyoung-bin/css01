@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="css/includebootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .myinfo{margin: 0 auto; float: none;}
+        .tab-style{margin-bottom: 50px; background-color:floralwhite;}
+
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus {
+            color: black;
+            cursor: default;
+            background-color: rgb(7, 118, 138);
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+        }
+        .nav-tabs>li.active>a:hover{
+          background-color: lavender  ;
+        }
+        .tab-style {background-color: #607D8B;}
+        a {color:black;}
+       .tab-style > li > a {border :none; border-radius: 0px; margin:0px;}
+       /* 마이페이지 테이블 
+       아이디 이름 비번 비밀번호 확인란을 width:200px; 이메일란을 가로로 배치 */
+
+       .sel{
+         width: 200px;
+         
+       }
+       .sel2{
+         width:200px;
+         display: inline-block;
+       } 
+       .tab-content{margin-top: 50px;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <!-- 로고를 넣는 영역 -->
+                <a class="navbar-brand" href="#"><img src="img/logo.svg" width="30"alt="boot"></a>
+
+              </div>
+              <!-- navbar안에 들어가는 컨텐트 -->
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">                
+                     <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown">Dropdown Example
+                      <!-- <span class="caret"></span></a> -->
+                      <!-- 우측 드롭다운 메뉴 -->
+                      <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"> 로그인</span></a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                      </ul>
+                    </li>                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+<section class="prod">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-9 myinfo">
+            <div class="titlebox">
+                마이페이지
+            </div>
+                <ul class="nav nav-tabs tab-style">
+                    <li class="active"><a data-toggle="tab" href="#info">Home</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+                  </ul>
+                
+                  <div class="tab-content">
+                    <div id="info" class="tab-pane fade in active">
+                      <p>*표시는 필수 사항입니다</p>
+                      <form>
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>*ID</td>
+                              <td><input type="text" class="form-control sel"></td>
+                            </tr>
+                            <tr>
+                              <td>*이름</td>
+                              <td><input type="text" class="form-control sel"></td>
+                            </tr>
+                            <tr>
+                              <td>*비밀번호</td>
+                              <td><input type="text" class="form-control sel"></td>
+                            </tr>  
+                            <tr>
+                              <td>*비밀번호 확인</td>
+                              <td><input type="text" class="form-control sel"></td>
+                            </tr> 
+                            <tr>
+                              <td>*이메일</td>
+                              <td><input type="text" class="form-control sel2">@
+                                <select class="form-control sel2">
+                                  <option>naver.com</option>
+                                  <option>gmail.com</option>
+                                  <option>daum.net</option>
+                                  <option>기타</option>
+                                </select>
+                                <button class="btn btn-info" type="button">중복확인</button>
+                              </div> </td>
+                            </tr>
+                            <tr>
+                              <td>*우편번호</td>
+                              <td>
+                                <div class="input-group">
+                                <input type="text" class="form-control" readonly >
+                                <div class="input-group-btn">
+                                  <button class="btn btn-info" type="button">주소찾기</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr> 
+                            <tr>
+                              <td>*주소</td>
+                              <td><input type="text" class="form-control cel"></td>
+                            </tr> 
+                            <tr>
+                              <td>*상세주소</td>
+                              <td><input type="text" class="form-control cel"></td>
+                            </tr>          
+
+                          </tbody>
+                        </table>
+                      </form>
+
+                      <div class ="titlefoot" align ="center">
+                        <button type ="button" class="btn btn-default">수정</button>
+                        <button type ="button" class="btn btn-default">목록</button>
+                      </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                      <h3>Menu 1</h3>
+                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                      <h3>Menu 2</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                      <h3>Menu 3</h3>
+                      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                  </div>
+            
+        </div>
+
+    </div>
+</section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="footer-menu">
+            <li><a href="">고객센터</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보취급방침</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-lg-8 copyright">
+          <a href="#">
+            <img src="img/logo.svg" alt="boot" width="30">
+          </a>  
+          Coding404 | 대표자 : 박인욱 | E-MAIL : yopy0817@gmail.com<br>
+          개인정보보호책임자 : 박인욱 | KG-ITbank에서 오프라인 강의를 진행합니다<br>
+          주소 : 서울시 강남구<br>
+          <address>©Bootstrap. ALL RIGHTS RESERVED</address>
+        </div>
+      </div>      
+    </div>
+  </footer>
+
+</body>
+</html>
