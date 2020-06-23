@@ -80,17 +80,19 @@
                                     <button class="btn btn-info" type="submit">중복확인</button>
                                 </div>
                             </div>
-                            <p class= "msgId"></p>
+                            <span class= "msgId"></span>
                         </div>
                         
                         
                         <div class="form-group">
                             <label>비밀번호</label>
-                            <input type="password" class="form-control" placeholder="비밀번호는 영문/숫자조합 8~16글자">
+                            <input type="password" class="form-control" placeholder="비밀번호는 영문/숫자조합 8~16글자" id="pw">
+                            <span class= "msgPw"></span>
                         </div>
                         <div class="form-group">
                             <label>비밀번호확인</label>
-                            <input type="password" class="form-control" placeholder="비밀번호를 확인해주세요">
+                            <input type="password" class="form-control" placeholder="비밀번호를 확인해주세요" id="pwConfirm">
+                            <span class= "msgPwConfirm"></span>
                         </div>
 
                         <div class="form-group">
@@ -177,7 +179,33 @@
             }else { //사용불가능한 경우
                 id.style.borderColor="red";
                 msgId.innerHTML = "";
+            }
+        }
+        //비밀번호 형식검사
+        var msgPw = document.querySelector(".msgPw");
+        var pw = document.getElementById("pw");
+        pw.onkeyup = function(){
+            var regex = /^.*(?=.{8,16})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
 
+            if(regex.test(pw.value)){//형식검사에 일치하는경우
+                pw.style.borderColor="green";
+                msgPw.innerHTML ="사용가능합니다."
+            }else{//형식에 일치하지않는경우
+                pw.style.borderColor = "red";
+                msgPw.innerHTML ="";
+            }
+        }
+        //비밀번호 확인검사 (pw와 동일한 값)
+        var msgPwConfirm = document.querySelector(".msgPwConfirm");
+        var pwConfirm = document.getElementById("pwConfirm");
+        pwConfirm.onkeyup = function(){
+            //비밀번호 확인란과 비교
+            if(pw.value ==pwConfirm.value){
+            pwConfirm.style.borderColor="green";
+            msgPwConfirm.innerHTML ="사용가능합니다."
+            }else{
+                pwConfirm.style.borderColor="red";
+                msgPwConfirm.innerHTML="";
             }
         }
     </script>
